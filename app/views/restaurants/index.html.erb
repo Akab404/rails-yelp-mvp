@@ -1,0 +1,14 @@
+<h1 class="fs-1">All restaurants</h1>
+<ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item">
+        <%= link_to restaurant_path(restaurant),  class:"p-3 d-block"  do %>
+          <i class="fa-solid fa-utensils"></i> <%= restaurant.name %>
+        <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to new_restaurant_path,  class:"btn btn-primary mt-3"  do %>
+  <i class="fa-solid fa-plus"></i></i> Add a new restaurant
+<% end %>
